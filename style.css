@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: "Manrope", sans-serif;
+   background-color: #ecf2f8;
+   height: 100vh;
+}
+
+main {
+   width: 100%;
+   max-width: 780px;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/* Left Side */
+
+.drawers {
+   background-size: cover;
+   height: 300px;
+   max-width: 300px;
+   border-radius: 15px 0 0 15px;
+}
+
+/* Right Side */
+.decoration {
+   display: flex;
+   flex-direction: column;
+   background: white;
+   border-radius: 0 10px 10px 0;
+   width: 500px;
+   height: 300px;
+}
+.decoration p:nth-child(1) {
+   font-size: 22px;
+   color: hsl(217, 19%, 35%);
+   font-weight: 800;
+   margin: 30px 30px 15px 30px;
+}
+.decoration > p:nth-child(2) {
+   font-size: 15px;
+   margin: 0px 30px 15px;
+   color: hsl(214, 17%, 51%);
+}
+/* Display flex the profile */
+.profile {
+   display: flex;
+   align-items: center;
+   margin: 10px 30px 0 30px;
+   position: relative;
+}
+.photo {
+   width: 50px;
+   border-radius: 50%;
+}
+.profile p {
+   margin-left: 15px;
+   color: hsl(217, 19%, 35%);
+   font-weight: 600;
+}
+.profile p span {
+   color: hsl(214, 17%, 51%);
+   font-weight: 300;
+}
+.share {
+   position: absolute;
+   right: 0;
+   padding: 10px;
+   border-radius: 50%;
+   background-color: hsl(214, 28%, 89%);
+   color: hsl(217, 19%, 35%);
+   cursor: pointer;
+}
+
+.social-media {
+   display: none;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   background-color: hsl(217, 19%, 35%);
+   padding: 10px 20px;
+   border-radius: 10px;
+}
+nav {
+   position: absolute;
+   bottom: 350px;
+   right: 370px;
+}
+nav p {
+   color: hsl(214, 17%, 51%);
+   font-weight: 600;
+}
+nav p,
+img:first-child {
+   margin-left: 10px;
+}
+nav img:last-child {
+   margin-right: 10px;
+}
+
+/* <style>
+         .attribution {
+            font-size: 11px;
+            text-align: center;
+         }
+         .attribution a {
+            color: hsl(228, 45%, 44%);
+         }
+      </style>  */
