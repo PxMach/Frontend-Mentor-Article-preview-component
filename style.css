@@ -22,10 +22,6 @@ main {
    justify-content: center;
 }
 
-/* this main class is linked to the nav tag */
-.main {
-   position: fixed;
-}
 /* Left Side */
 
 .drawers {
@@ -44,7 +40,7 @@ main {
    width: 500px;
    height: 300px;
 }
-.decoration p:nth-child(1) {
+.decoration > p:nth-child(1) {
    font-size: 22px;
    color: hsl(217, 19%, 35%);
    font-weight: 800;
@@ -66,7 +62,7 @@ main {
    width: 50px;
    border-radius: 50%;
 }
-.profile p {
+.profile > p {
    margin-left: 15px;
    color: hsl(217, 19%, 35%);
    font-weight: 600;
@@ -83,29 +79,41 @@ main {
    background-color: hsl(214, 28%, 89%);
    color: hsl(217, 19%, 35%);
    cursor: pointer;
+   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.share.active {
+   transform: scale(1.2); /* Agrandissement */
+   background-color: hsl(217, 19%, 35%); /* Change la couleur */
+   color: white; /* Change la couleur du texte */
 }
 
 /* the NAV tag starts here  */
+.nav-profile {
+   position: relative;
+}
 .social-media {
    display: none;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    background-color: hsl(217, 19%, 35%);
-   padding: 10px 20px;
+   width: 200px;
+   height: 50px;
    border-radius: 10px;
 }
 .social-media.visible {
    display: flex;
 }
 nav {
-   position: relative;
-   top: 30px;
-   left: 335px;
+   position: absolute;
+   bottom: 60px;
+   left: 295px;
 }
 nav p {
+   font-size: 13px;
    color: hsl(214, 17%, 51%);
    font-weight: 600;
+   text-align: center;
 }
 nav p,
 .facebook:first-child {
@@ -122,7 +130,7 @@ nav img:last-child {
    height: 0;
    border-left: 10px solid transparent;
    border-right: 10px solid transparent;
-   border-top: 15px solid hsl(217, 19%, 35%); /* Couleur de la flèche */
+   border-top: 15px solid hsl(217, 19%, 35%);
    animation: fall 2s infinite;
 }
 
@@ -138,29 +146,43 @@ nav img:last-child {
    }
    .drawers {
       height: 250px;
-      width: 410px;
+      width: 350px;
       border-radius: 10px 10px 0 0;
       margin: 0px;
    }
 
    /* Right Side */
    .decoration {
-      height: 320px;
-      width: 410px;
+      height: 380px;
+      width: 350px;
       border-radius: 0 0 10px 10px;
    }
 
    .social-media {
-      width: 410px;
-      height: 70px;
+      display: flex;
+      justify-content: flex-start;
+      width: 350px;
+      height: 82px;
       padding: 0;
       border-radius: 0 0 10px 10px;
+      align-items: left;
+   }
+   .share {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      z-index: 1;
    }
    nav {
-      
-      position: relative;
-      top: 70px;
-      left: 40px;
+      position: absolute;
+      top: 5px;
+      left: -30px;
+   }
+   nav p {
+      margin: 0 15px 0 15px;
+   }
+   nav img {
+      margin: 0 15px 0 15px;
    }
    .falling-arrow {
       width: 0;
