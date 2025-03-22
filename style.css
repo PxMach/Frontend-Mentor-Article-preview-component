@@ -82,9 +82,9 @@ main {
    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .share.active {
-   transform: scale(1.2); /* Agrandissement */
-   background-color: hsl(217, 19%, 35%); /* Change la couleur */
-   color: white; /* Change la couleur du texte */
+   transform: scale(1.2); /* Expansion */
+   background-color: hsl(217, 19%, 35%); /* Change color */
+   color: white; /* Change text color */
 }
 
 /* the NAV tag starts here  */
