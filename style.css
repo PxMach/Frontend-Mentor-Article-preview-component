@@ -21,13 +21,18 @@ main {
    align-items: center;
    justify-content: center;
 }
+
+/* this main class is linked to the nav tag */
+.main {
+   position: fixed;
+}
 /* Left Side */
 
 .drawers {
-   background-size: cover;
    height: 300px;
-   max-width: 300px;
+   width: 300px;
    border-radius: 15px 0 0 15px;
+   margin: 0;
 }
 
 /* Right Side */
@@ -80,6 +85,7 @@ main {
    cursor: pointer;
 }
 
+/* the NAV tag starts here  */
 .social-media {
    display: none;
    flex-direction: row;
@@ -89,29 +95,76 @@ main {
    padding: 10px 20px;
    border-radius: 10px;
 }
+.social-media.visible {
+   display: flex;
+}
 nav {
-   position: absolute;
-   bottom: 350px;
-   right: 370px;
+   position: relative;
+   top: 30px;
+   left: 335px;
 }
 nav p {
    color: hsl(214, 17%, 51%);
    font-weight: 600;
 }
 nav p,
-img:first-child {
+.facebook:first-child {
    margin-left: 10px;
 }
 nav img:last-child {
    margin-right: 10px;
 }
+.falling-arrow {
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   width: 0;
+   height: 0;
+   border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+   border-top: 15px solid hsl(217, 19%, 35%); /* Couleur de la flèche */
+   animation: fall 2s infinite;
+}
 
-/* <style>
-         .attribution {
-            font-size: 11px;
-            text-align: center;
-         }
-         .attribution a {
-            color: hsl(228, 45%, 44%);
-         }
-      </style>  */
+@media (max-width: 768px) {
+   main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+   }
+   .main {
+      position: static;
+   }
+   .drawers {
+      height: 250px;
+      width: 410px;
+      border-radius: 10px 10px 0 0;
+      margin: 0px;
+   }
+
+   /* Right Side */
+   .decoration {
+      height: 320px;
+      width: 410px;
+      border-radius: 0 0 10px 10px;
+   }
+
+   .social-media {
+      width: 410px;
+      height: 70px;
+      padding: 0;
+      border-radius: 0 0 10px 10px;
+   }
+   nav {
+      
+      position: relative;
+      top: 70px;
+      left: 40px;
+   }
+   .falling-arrow {
+      width: 0;
+      height: 0;
+      border: none;
+   }
+}
